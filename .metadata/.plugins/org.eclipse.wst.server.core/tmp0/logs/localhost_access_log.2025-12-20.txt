@@ -1,0 +1,15 @@
+127.0.0.1 - - [20/Dec/2025:09:33:34 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:33:37 +0530] "GET /onlinebookstore/ HTTP/1.1" 200 2259
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:33:39 +0530] "GET /onlinebookstore/logo.png HTTP/1.1" 200 15829
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:33:39 +0530] "GET /onlinebookstore/styles.css HTTP/1.1" 200 1253
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:33:39 +0530] "GET /onlinebookstore/Photo.jpg HTTP/1.1" 200 253461
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:33:39 +0530] "GET /onlinebookstore/favicons/favicon-32x32.png HTTP/1.1" 200 1251
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:33:39 +0530] "GET /onlinebookstore/favicons/site.webmanifest HTTP/1.1" 200 263
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:33:43 +0530] "GET /onlinebookstore/CustomerLogin.html HTTP/1.1" 200 5781
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:33:44 +0530] "GET /onlinebookstore/CustomerRegister.html HTTP/1.1" 200 3926
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:33:45 +0530] "GET /onlinebookstore/login.html HTTP/1.1" 200 2508
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:33:47 +0530] "GET /onlinebookstore/SellerLogin.html HTTP/1.1" 200 3172
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:34:04 +0530] "POST /onlinebookstore/adminlog HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:34:04 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:34:14 +0530] "POST /onlinebookstore/adminlog HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [20/Dec/2025:09:34:18 +0530] "POST /onlinebookstore/adminlog HTTP/1.1" 200 -

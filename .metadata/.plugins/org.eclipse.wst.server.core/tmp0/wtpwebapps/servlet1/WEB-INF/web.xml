@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    version="4.0"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    
+    
+    
+  <display-name>Archetype Created Web Application</display-name>
+ <context-param>
+ 	<param-name>postUrl</param-name>
+ 	<param-value>jdbc:postgresql://localhost:5432/qsp</param-value>
+ </context-param>
+ <context-param>
+ 	<param-name>user</param-name>
+ 	<param-value>postgres</param-value>
+ </context-param>
+ <context-param>
+ 	<param-name>pass</param-name>
+ 	<param-value>root</param-value>
+ </context-param>
+  
+
+
+
+
+
+
+<servlet>
+	<servlet-name>ConfigServletVirat</servlet-name>
+	<servlet-class>com.qsp.ConfigServletVirat</servlet-class>
+	<init-param>
+		<param-name>wife</param-name>
+ 		<param-value>Anushka</param-value>
+	</init-param>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ConfigServletVirat</servlet-name>
+    <url-pattern>/viratConfig</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>ConfigServletHardik</servlet-name>
+	<servlet-class>com.qsp.ConfigServletHardik</servlet-class>
+	<init-param>
+		<param-name>wife</param-name>
+ 		<param-value>Null</param-value>
+	</init-param>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ConfigServletHardik</servlet-name>
+	<url-pattern>/HardikConfig</url-pattern>
+	
+</servlet-mapping>
+
+
+  
+  <servlet>
+  <servlet-name>Myservlet</servlet-name>
+  <servlet-class>com.qsp.Myservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Myservlet</servlet-name>
+  <url-pattern>/hi</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+ 
+  
+  
+  
+  
+</web-app>

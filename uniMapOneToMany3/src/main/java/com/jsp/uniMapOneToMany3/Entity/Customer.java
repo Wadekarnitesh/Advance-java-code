@@ -1,0 +1,68 @@
+package com.jsp.uniMapOneToMany3.Entity;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Customer {
+
+	@Id
+	private int cid;
+	
+	private String name;
+	
+	private String emil;
+	
+	
+	@OneToMany
+	private List<Orders> list;
+	
+	public Customer() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Customer(int cid, String name, String emil, List<Orders> list) {
+		this.cid = cid;
+		this.name = name;
+		this.emil = emil;
+		this.list = list;
+	}
+
+	public int getCid() {
+		return cid;
+	}
+
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmil() {
+		return emil;
+	}
+
+	public void setEmil(String emil) {
+		this.emil = emil;
+	}
+
+	public List<Orders> getList() {
+		return list;
+	}
+
+	public void setList(List<Orders> list) {
+		this.list = list;
+	}
+	
+	
+	
+}

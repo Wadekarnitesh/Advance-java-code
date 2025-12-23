@@ -1,0 +1,49 @@
+package com.jsp.OneToOne.Entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class PrimeMinister {
+	
+	@Id
+	private int pmId;
+	
+	private String pmName;
+	
+	
+	public PrimeMinister() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public PrimeMinister(int pmId, String pmName) {
+		this.pmId = pmId;
+		this.pmName = pmName;
+	}
+
+
+	public int getPmId() {
+		return pmId;
+	}
+
+
+	public void setPmId(int pmId) {
+		this.pmId = pmId;
+	}
+
+
+	public String getPmName() {
+		return pmName;
+	}
+
+
+	public void setPmName(String pmName) {
+		this.pmName = pmName;
+	}
+
+
+	
+	
+
+}

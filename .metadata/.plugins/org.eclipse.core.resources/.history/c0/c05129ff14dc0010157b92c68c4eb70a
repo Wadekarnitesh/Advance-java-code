@@ -1,0 +1,32 @@
+package com.jsp.unimapcascade2.entity;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@Entity
+public class College {
+
+	@Id
+	private int cid;
+	
+	private String cName;
+	
+	private String loc;
+	
+	@OneToOne(cascade =  CascadeType.ALL)
+	private Principle principle;
+	
+	@OneToMany(cascade =  CascadeType.ALL)
+	private List<Departments> departments;
+	
+	@OneToMany(cascade =  CascadeType.ALL)
+	private List<Bus> bus;
+	
+	
+	
+}

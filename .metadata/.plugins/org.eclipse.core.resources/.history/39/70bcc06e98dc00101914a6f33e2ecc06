@@ -1,0 +1,38 @@
+package com.jsp.bimaponetomany.driver;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.jsp.bimaponetomany.entity.TeamLeader;
+
+public class ManagerTeamLeaderDriver {
+
+	public static void main(String[] args) {
+		
+		EntityManager em = Persistence.createEntityManagerFactory("pg").createEntityManager();
+		
+		EntityTransaction et = em.getTransaction();
+		
+		TeamLeader t1 = new TeamLeader();
+		t1.setId(10);
+		t1.setName("Arjun");
+		t1.setSkill("Java");
+		t1.setSalary(50000.0);
+		
+		TeamLeader t2 = new TeamLeader();
+		t2.setId(11);
+		t2.setName("Aditya");
+		t2.setSkill("Python");
+		t2.setSalary(60000.0);
+		
+		TeamLeader t3 = new TeamLeader();
+		t3.setId(12);
+		t3.setName("Ajay");
+		t3.setSkill("Javascript");
+		t3.setSalary(70000.0);
+		
+		
+		
+	}
+}

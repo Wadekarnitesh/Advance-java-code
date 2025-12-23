@@ -1,0 +1,18 @@
+package com.jsp.unimapcascade2.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class BranchHead {
+
+	@Id
+	private int bid;
+	
+	private String name;
+	
+	private int experience;
+	
+	private double salary;
+	
+}

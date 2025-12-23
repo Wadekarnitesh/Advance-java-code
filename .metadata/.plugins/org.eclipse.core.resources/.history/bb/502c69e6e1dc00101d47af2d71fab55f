@@ -1,0 +1,39 @@
+package com.jsp.bimaponetoone2.driver;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.jsp.bimaponetoone2.entity.Citizen;
+import com.jsp.bimaponetoone2.entity.VoterID;
+
+public class citizenVoterIDDriver {
+
+	public static void main(String[] args) {
+		
+		
+		EntityManager em = Persistence.createEntityManagerFactory("pg").createEntityManager();
+		
+		EntityTransaction et = em.getTransaction();
+		
+		Citizen ct = new Citizen();
+		ct.setCid(202);
+		ct.setName("Rakesh ");
+
+		ct.setNationality("Indian");
+		ct.setAddress("Kharadi Pune");
+		
+		VoterID v1 = new VoterID();
+		
+		v1.setId(1);
+		v1.setVoterId("L5352J353");
+		v1.setDob("12/06/2002");
+		
+		
+		ct.setVoter(v1);
+		
+		v1.setCitizen(ct);
+		
+		
+	}
+}

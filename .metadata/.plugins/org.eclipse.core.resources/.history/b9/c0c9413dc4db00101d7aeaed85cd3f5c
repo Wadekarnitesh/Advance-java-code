@@ -1,0 +1,34 @@
+package com.jsp.uniMapOneTOOne.Driver;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.jsp.uniMapOneTOOne.Entity.Employee;
+import com.jsp.uniMapOneTOOne.Entity.AdharCard ;
+
+public class EmployeeAdharCard  {
+
+	public static void main(String[] args) {
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pg");
+		EntityManager em = emf.createEntityManager();
+
+		EntityTransaction et = em.getTransaction();
+		
+		
+		AdharCard  p1 = new AdharCard ("P4633UY", "suraj", "12/08/2003");
+	
+		
+		Employee e1 = new Employee(9, "suraj", 988383888, p1);
+		
+		et.begin();
+		em.persist(p1);
+		em.persist(e1);
+		et.commit();
+		
+		
+	}
+	
+}

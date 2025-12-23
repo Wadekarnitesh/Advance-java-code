@@ -1,0 +1,19 @@
+package com.jsp.bimaponetomany.entity;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Manager {
+
+	@Id
+	private int id;
+	private String name;
+	private double salary;
+	@OneToMany
+	private List<TeamLeader> list;
+	
+}

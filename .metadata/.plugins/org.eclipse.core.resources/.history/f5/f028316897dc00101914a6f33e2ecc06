@@ -1,0 +1,20 @@
+package com.jsp.bimaponetomany.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class TeamLeader {
+
+	@Id
+	private int id;
+	private String name;
+	private String skill;
+	private double salary;
+	
+	@ManyToOne
+	private Manager manager;
+	
+	
+}

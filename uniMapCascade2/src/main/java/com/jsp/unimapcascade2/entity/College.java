@@ -1,0 +1,95 @@
+package com.jsp.unimapcascade2.entity;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@Entity
+public class College {
+
+	@Id
+	private int cid;
+	
+	private String cName;
+	
+	private String loc;
+	
+	@OneToOne(cascade =  CascadeType.ALL)
+	private Principle principle;
+	
+	@OneToMany(cascade =  CascadeType.ALL)
+	private List<Departments> departments;
+	
+	@OneToMany(cascade =  CascadeType.ALL)
+	private List<Bus> bus;
+	
+	public College() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public College(int cid, String cName, String loc, Principle principle, List<Departments> departments,
+			List<Bus> bus) {
+		this.cid = cid;
+		this.cName = cName;
+		this.loc = loc;
+		this.principle = principle;
+		this.departments = departments;
+		this.bus = bus;
+	}
+
+	public int getCid() {
+		return cid;
+	}
+
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
+
+	public String getcName() {
+		return cName;
+	}
+
+	public void setcName(String cName) {
+		this.cName = cName;
+	}
+
+	public String getLoc() {
+		return loc;
+	}
+
+	public void setLoc(String loc) {
+		this.loc = loc;
+	}
+
+	public Principle getPrinciple() {
+		return principle;
+	}
+
+	public void setPrinciple(Principle principle) {
+		this.principle = principle;
+	}
+
+	public List<Departments> getDepartments() {
+		return departments;
+	}
+
+	public void setDepartments(List<Departments> departments) {
+		this.departments = departments;
+	}
+
+	public List<Bus> getBus() {
+		return bus;
+	}
+
+	public void setBus(List<Bus> bus) {
+		this.bus = bus;
+	}
+
+	
+	
+	
+}

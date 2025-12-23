@@ -1,0 +1,48 @@
+package com.jsp.secondlevelcache.driver;
+import com.jsp.secondlevelcache.entity.*;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+
+public class MarkerDriver {
+
+	public static void main(String[] args) {
+		
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pg");
+		EntityManager em= emf.createEntityManager();
+		
+		EntityTransaction et = em.getTransaction();
+		
+//		Marker m1 = new Marker(101, "Red", 50);
+//		Marker m2 = new Marker(102, "Blue", 60);
+//		
+//		et.begin();
+//		em.persist(m2);
+//		em.persist(m1);
+//		et.commit();
+		
+		Marker m3 = em.find(Marker.class, 101);
+		Marker m4 = em.find(Marker.class, 101);
+		
+		System.out.println(m3);
+		System.out.println(m4);
+		EntityManager em2 =emf.createEntityManager();
+		
+		Marker m5 = em2.find(Marker.class, 101);
+		Marker m6 = em2.find(Marker.class, 101);
+		
+		
+		System.out.println(m5);
+		System.out.println(m6);
+		
+		
+		
+		
+		
+	}
+	
+}

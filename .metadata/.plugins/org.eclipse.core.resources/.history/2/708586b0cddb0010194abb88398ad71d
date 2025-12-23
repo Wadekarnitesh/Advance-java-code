@@ -1,0 +1,5 @@
+package com.jspunimapcascade.Entity;
+
+public class Doctor {
+
+}

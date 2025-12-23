@@ -1,0 +1,63 @@
+package com.jsp.unimapcascade2.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Bus {
+
+	@Id
+	private int bid;
+	private String busNumber;
+	private int routeNo;
+	
+	@OneToOne
+	private Driver driver;
+	
+	public Bus() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Bus(int bid, String busNumber, int routeNo, Driver driver) {
+		super();
+		this.bid = bid;
+		this.busNumber = busNumber;
+		this.routeNo = routeNo;
+		this.driver = driver;
+	}
+
+	public int getBid() {
+		return bid;
+	}
+
+	public void setBid(int bid) {
+		this.bid = bid;
+	}
+
+	public String getBusNumber() {
+		return busNumber;
+	}
+
+	public void setBusNumber(String busNumber) {
+		this.busNumber = busNumber;
+	}
+
+	public int getRouteNo() {
+		return routeNo;
+	}
+
+	public void setRouteNo(int routeNo) {
+		this.routeNo = routeNo;
+	}
+
+	public Driver getDriver() {
+		return driver;
+	}
+
+	public void setDriver(Driver driver) {
+		this.driver = driver;
+	}
+	
+	
+}

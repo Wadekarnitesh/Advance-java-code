@@ -1,0 +1,60 @@
+package com.jsp.unimapcascade2.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Principle {
+
+	@Id
+	private int pid;
+	private String name;
+	private int experience;
+	private double salry;
+
+	public Principle() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Principle(int pid, String name, int experience, double salry) {
+		super();
+		this.pid = pid;
+		this.name = name;
+		this.experience = experience;
+		this.salry = salry;
+	}
+
+	public int getPid() {
+		return pid;
+	}
+
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getExperience() {
+		return experience;
+	}
+
+	public void setExperience(int experience) {
+		this.experience = experience;
+	}
+
+	public double getSalry() {
+		return salry;
+	}
+
+	public void setSalry(double salry) {
+		this.salry = salry;
+	}
+	
+	
+}

@@ -1,0 +1,5 @@
+package com.jsp.bimapmanytomany.driver;
+
+public class StudentCourseDriver {
+
+}

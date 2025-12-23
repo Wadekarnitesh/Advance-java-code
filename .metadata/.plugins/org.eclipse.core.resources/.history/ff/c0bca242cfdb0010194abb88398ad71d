@@ -1,0 +1,21 @@
+package com.jspunimapcascade.Driver;
+
+import com.jspunimapcascade.Entity.MD;
+import com.jspunimapcascade.Entity.Patient;
+
+public class HospitalInfoDriver {
+
+	public static void main(String[] args) {
+		
+		
+		MD md = new MD(10, "Mr. Viraj Joshi", 300000);
+		
+		Patient patient1 = new Patient(01, "kiran", "Headache");
+		Patient patient2= new Patient(02, "Jangam", "Cancer");
+		Patient patient3 = new Patient(03, "lalit", "Fewer");
+		Patient patient4= new Patient(04, "Gautam", "Headache");
+		
+		
+	}
+	
+}

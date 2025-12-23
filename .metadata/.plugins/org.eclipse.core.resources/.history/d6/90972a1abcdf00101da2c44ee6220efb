@@ -1,0 +1,5 @@
+package com.jsp.singlelevelcache.enity;
+
+public class Marker {
+
+}

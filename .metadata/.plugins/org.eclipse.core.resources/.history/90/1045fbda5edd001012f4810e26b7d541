@@ -1,0 +1,5 @@
+package com.jsp.bimapmanytomany.entity;
+
+public class Course {
+
+}

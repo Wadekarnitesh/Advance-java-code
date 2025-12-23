@@ -1,0 +1,5 @@
+package com.jsp.uniMapManyToOne.Entity;
+
+public class University {
+
+}

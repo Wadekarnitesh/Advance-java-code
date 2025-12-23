@@ -1,0 +1,79 @@
+package com.jsp.unimapcascade2.driver;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.jsp.unimapcascade2.entity.BranchHead;
+import com.jsp.unimapcascade2.entity.Bus;
+import com.jsp.unimapcascade2.entity.College;
+import com.jsp.unimapcascade2.entity.Departments;
+import com.jsp.unimapcascade2.entity.Driver;
+import com.jsp.unimapcascade2.entity.Principle;
+
+public class UniversityCollegeDriver{
+	
+	public static void main(String[] args) {
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory(null);
+		
+		EntityManager em = emf.createEntityManager();
+		
+		EntityTransaction et = em.getTransaction();
+	
+		Driver driver1 = new Driver(1, "Rakesh ", "LJK3231", 3);
+		Driver driver2 = new Driver(2, "Manoj ", "TUO7979", 1);
+		Driver driver3 = new Driver(3, "Viraj ", "RDY23232", 0);
+		Driver driver4 = new Driver(4, "Shivam ", "NHWE3422", 2);
+		Driver driver5 = new Driver(5, "Tapu ", "F3332J3", 9);
+	
+		Bus bus1 = new Bus(2, "MH11OP9849", "Hybrid", driver4);
+		Bus bus2 = new Bus(3, "MH11KL4559", "Petrol", driver5);
+		Bus bus3 = new Bus(4, "MH11NM4999", "CNG", driver3);
+		Bus bus4 = new Bus(5, "MH11UY7649", "LPG", driver1);
+		Bus bus5 = new Bus(6, "MH11CH1234", "Diesel", driver2);
+		
+		
+		BranchHead branchHead1 = new BranchHead(10, "Prpf. Shashikant", "Civil Engineering", 6);
+		BranchHead branchHead2 = new BranchHead(11, "Prpf. Madhavan", "Electical Engineering", 3);
+		BranchHead branchHead3 = new BranchHead(9, "Prpf. Girdhari", "Machanical Engineering", 9);
+		BranchHead branchHead4 = new BranchHead(8, "Prpf. Vikram", "IT Engineering", 10);
+		BranchHead branchHead5 = new BranchHead(7, "Prpf. Tukaram", "Computer Engineering", 7);
+		
+		Departments departments1 = new Departments(1, "Computer Engineering", 11, branchHead5);
+		Departments departments5 = new Departments(2, "Civil Engineering", 10, branchHead1);
+		Departments departments2= new Departments(4, "Mechanical Engineering", 9, branchHead3);
+		Departments departments3 = new Departments(5, "IT Engineering", 4, branchHead4);
+		Departments departments4 = new Departments(6, "Electrical Engineering", 10, branchHead2);
+		
+		Principle principle1 = new Principle(3,"Prof. Ramashish Joshi", 20, 89000);
+		
+		College college1= new College(9, "Dhole Patil College Of Engineering", "Kharadi", principle1, List.of(departments1,departments2,departments3,departments4,departments5), List.of(bus1,bus2,bus3,bus4,bus5));
+		
+		Driver driver6 = new Driver(6, "sksham ", "LJK3231", 5);
+		Driver driver7 = new Driver(7, "sarthak", "UR89999", 7);
+		Driver driver8 = new Driver(8, "Dinesh ", "FE34222", 0);
+		
+		Bus bus6 = new Bus(6, "MH12OP9849", "Hybrid", driver6);
+		Bus bus7 = new Bus(7, "MH12KL4559", "Petrol", driver7);
+		Bus bus8 = new Bus(8, "MH12NM4999", "CNG", driver8);
+		
+		
+		
+		BranchHead branchHead6 = new BranchHead(11, "Prpf. yashwant", "E&TC Engineering", 6);
+		BranchHead branchHead7 = new BranchHead(12, "Prpf. Pavan", "Electical Engineering", 3);
+		BranchHead branchHead8 = new BranchHead(13, "Prpf. Aadesh", "Machanical Engineering", 9);
+		BranchHead branchHead9 = new BranchHead(14, "Prpf. Vijay", "Computer Engineering", 9);
+		
+		Departments departments6 = new Departments(3, "Computer Engineering", 11, branchHead9);
+		Departments departments7 = new Departments(7, "E&TC Engineering", 10, branchHead6);
+		Departments departments8= new Departments(8, "Mechanical Engineering", 9, branchHead8);
+		Departments departments9 = new Departments(9, "Electrical Engineering", 4, branchHead7);
+		
+	}
+	
+
+}

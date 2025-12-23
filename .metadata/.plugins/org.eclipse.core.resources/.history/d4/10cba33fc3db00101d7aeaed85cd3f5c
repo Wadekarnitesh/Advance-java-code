@@ -1,0 +1,65 @@
+package com.jsp.uniMapOneTOOne.Entity;
+
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Pancard {
+	
+	@Id
+	private String panNumber;
+	private String name;
+	private String dob;
+	@OneToOne
+	private Employee employee;
+	
+	public Pancard() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Pancard(String panNumber, String name, String dob, Employee employee) {
+		super();
+		this.panNumber = panNumber;
+		this.name = name;
+		this.dob = dob;
+		this.employee = employee;
+	}
+
+	public String getPanNumber() {
+		return panNumber;
+	}
+
+	public void setPanNumber(String panNumber) {
+		this.panNumber = panNumber;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+	
+	
+	
+
+}

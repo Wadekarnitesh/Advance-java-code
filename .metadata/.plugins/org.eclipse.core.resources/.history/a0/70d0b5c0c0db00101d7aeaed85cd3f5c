@@ -1,0 +1,60 @@
+package com.jsp.OneToOne.Driver;
+
+import javax.persistence.OneToOne;
+
+public class PrimeMinister {
+	
+	
+	private int pmId;
+	
+	private String pmName;
+	@OneToOne
+	private Country country;
+	
+	
+	public PrimeMinister() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public PrimeMinister(int pmId, String pmName, Country country) {
+		super();
+		this.pmId = pmId;
+		this.pmName = pmName;
+		this.country = country;
+	}
+
+
+	public int getPmId() {
+		return pmId;
+	}
+
+
+	public void setPmId(int pmId) {
+		this.pmId = pmId;
+	}
+
+
+	public String getPmName() {
+		return pmName;
+	}
+
+
+	public void setPmName(String pmName) {
+		this.pmName = pmName;
+	}
+
+
+	public Country getCountry() {
+		return country;
+	}
+
+
+	public void setCountry(Country country) {
+		this.country = country;
+	}
+	
+	
+	
+
+}

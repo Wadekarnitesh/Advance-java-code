@@ -1,0 +1,15 @@
+package com.jsp.singlelevelcache.enity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Marker {
+	
+	@Id
+	private int id;
+	private String color;
+	private double price;
+	
+
+}

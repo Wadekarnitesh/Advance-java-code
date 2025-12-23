@@ -1,0 +1,33 @@
+package com.jsp.uniMapManyToOne.Driver;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.jsp.uniMapManyToOne.Entity.Colleges;
+import com.jsp.uniMapManyToOne.Entity.University;
+
+public class CollegeUniversityDriver {
+
+	public static void main(String[] args) {
+
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pg");
+		EntityManager em = emf.createEntityManager();
+
+		EntityTransaction et = em.getTransaction();
+
+		University u1 = new University(3, "SPPU", "Pune");
+
+		Colleges c1 = new Colleges(02, "Anantrao pawar college Of Engineering", "Swarget", u1);
+		Colleges c2 = new Colleges(03, "Dhole Patil  college Of Engineering", "Kharadi", u1);
+		Colleges c3 = new Colleges(04, "JSPM college Of Engineering", "Wagholi", u1);
+
+		et.begin();
+		em.persist(u1);
+		em.persist(c1);
+		em.persist(c2);
+		em.persist(c3);
+		et.commit();
+	}
+}

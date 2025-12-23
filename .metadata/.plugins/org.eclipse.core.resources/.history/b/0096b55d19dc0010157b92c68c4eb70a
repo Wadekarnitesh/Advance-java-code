@@ -1,0 +1,52 @@
+package com.jsp.unimapcascade2.driver;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.jsp.unimapcascade2.entity.BranchHead;
+import com.jsp.unimapcascade2.entity.Bus;
+import com.jsp.unimapcascade2.entity.Departments;
+import com.jsp.unimapcascade2.entity.Driver;
+
+public class UniversityCollegeDriver{
+	
+	public static void main(String[] args) {
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory(null);
+		
+		EntityManager em = emf.createEntityManager();
+		
+		EntityTransaction et = em.getTransaction();
+	
+		Driver driver1 = new Driver(1, "Rakesh ", "LJK3231", 3);
+		Driver driver2 = new Driver(2, "Manoj ", "TUO7979", 1);
+		Driver driver3 = new Driver(3, "Viraj ", "RDY23232", 0);
+		Driver driver4 = new Driver(4, "Shivam ", "NHWE3422", 2);
+		Driver driver5 = new Driver(5, "Tapu ", "F3332J3", 9);
+	
+		Bus bus1 = new Bus(2, "MH11OP9849", "Hybrid", driver4);
+		Bus bus2 = new Bus(3, "MH11KL4559", "Petrol", driver5);
+		Bus bus3 = new Bus(4, "MH11NM4999", "CNG", driver3);
+		Bus bus4 = new Bus(5, "MH11UY7649", "LPG", driver1);
+		Bus bus5 = new Bus(6, "MH11CH1234", "Diesel", driver2);
+		
+		
+		BranchHead branchHead1 = new BranchHead(10, "Prpf. Shashikant", "Civil Engineering", 6);
+		BranchHead branchHead2 = new BranchHead(11, "Prpf. Madhavan", "Electical Engineering", 3);
+		BranchHead branchHead3 = new BranchHead(9, "Prpf. Girdhari", "Machanical Engineering", 9);
+		BranchHead branchHead4 = new BranchHead(8, "Prpf. Vikram", "IT Engineering", 10);
+		BranchHead branchHead5 = new BranchHead(7, "Prpf. Tukaram", "Computer Engineering", 7);
+		
+		Departments departments1 = new Departments(1, "Computer Engineering", 11, branchHead5);
+		Departments departments5 = new Departments(2, "Civil Engineering", 10, branchHead1);
+		Departments departments2= new Departments(4, "Mechanical Engineering", 9, branchHead3);
+		Departments departments3 = new Departments(5, "IT Engineering", 4, branchHead4);
+		Departments departments4 = new Departments(6, "Electrical Engineering", 10, branchHead2);
+		
+		
+	}
+	
+
+}

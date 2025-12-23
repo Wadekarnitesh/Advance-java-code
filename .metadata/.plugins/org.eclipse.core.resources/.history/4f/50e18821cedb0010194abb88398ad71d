@@ -1,0 +1,76 @@
+package com.jspunimapcascade.Entity;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Hospital {
+	@Id
+	private int hid;
+
+	private String name;
+	private String loc;
+
+	@OneToMany
+	List<Doctor> list;
+	@OneToOne
+	private MD md;
+
+	public Hospital() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Hospital(int hid, String name, String loc, List<Doctor> list, MD md) {
+		super();
+		this.hid = hid;
+		this.name = name;
+		this.loc = loc;
+		this.list = list;
+		this.md = md;
+	}
+
+	public int getHid() {
+		return hid;
+	}
+
+	public void setHid(int hid) {
+		this.hid = hid;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLoc() {
+		return loc;
+	}
+
+	public void setLoc(String loc) {
+		this.loc = loc;
+	}
+
+	public List<Doctor> getList() {
+		return list;
+	}
+
+	public void setList(List<Doctor> list) {
+		this.list = list;
+	}
+
+	public MD getMd() {
+		return md;
+	}
+
+	public void setMd(MD md) {
+		this.md = md;
+	}
+
+}
