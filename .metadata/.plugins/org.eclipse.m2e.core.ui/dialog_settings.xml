@@ -121,8 +121,21 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
-			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\springdatajpa"/>
-			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\springboot\springboot"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\RespnseEntityWithException1\RespnseEntityWithException1"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\spring-web-restApi4\spring-web-restApi4"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\spring-web-restApi3\spring-web-restApi3"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\spring-web-respApi2\spring-web-respApi2"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\spring-web-restApi1\spring-web-restApi1"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\spring-pretest\spring-pretest"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\mvc-product-pages\mvc-product-pages"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\spring-web-mvc4\spring-web-mvc4"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\spring-web-mvc3\spring-web-mvc3"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\spring-web-mvc2\spring-web-mvc4"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\spring-web-mvc1\spring-web-mvc1"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\springweb-mvc3\springweb-mvc3"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\spring-mvc2\spring-mvc2"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\spring-mvc1\spring-mvc1\src\main\webapp\WEB-INF\views\index.jsp"/>
+			<item value="C:\Users\nites\Downloads\SPRING_PROJECT\spring-mvc1\spring-mvc1"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
